@@ -12,9 +12,29 @@ Java有一些基本类型`int/long/boolean/double/char`，还有object类型`Str
 
 ## Arrays and collections
 
-Array是固定长度的数组，可以声明并赋值一个`int[]`类型的数组
+Array是固定长度的数组，可以声明并赋值一个`int[]`类型的数组：
 ```java
 int[] a = new int[100];
 ```
 
-`List`
+通过`List`可以创建可变长度的数组：
+```java
+List<Integer> list = new ArrayList<Integer>();
+```
+`List`接口不能直接创建对象，其只是规定了`List`必须提供的操作，具体的实现包括`ArrayList`和`LinkedList`。另外，`List`无法采用原始数据类型`int`等作为参数，需要使用等价的object类型。
+
+## Methods
+
+Java的每个方法都必须在类中，`static`修饰的方法中，`this`参数会隐式传递，不会显式地出现在参数列表中。
+
+## Mutating values vs. reassigning variables
+
+可以通过`final`使得引用不能被重新赋值（重新指向另一个对象）：
+```java
+final int n = 5;
+```
+编译器会对这些`final`变量进行静态检查并及时报错。
+
+## 工程习惯
+
+写代码时需要将相应参数、返回值的假设（约束）明确写在注释里。
