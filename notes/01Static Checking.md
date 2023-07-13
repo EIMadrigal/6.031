@@ -12,3 +12,9 @@ Java有一些基本类型`int/long/boolean/double/char`，还有object类型`Str
 
 ## Arrays and collections
 
+Array是固定长度的数组，可以声明并赋值一个`int[]`类型的数组
+```java
+int[] a = new int[100];
+```
+
+`List`
