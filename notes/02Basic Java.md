@@ -31,3 +31,14 @@ f(t, tb);  // t refers to "a", tb refers to "ad",
 
 ## Java Collections
 
+可以创建一些不可变的字面量：
+```java
+String[] arr = {"a", "b", "c"};  // array literal
+List.of("a", "b", "c");
+Set.of("a", "b", "c");
+Map.of("a", 5, "b", 7);  // `Map`和`Set`的key必须是可哈希的
+```
+
+
+
+
