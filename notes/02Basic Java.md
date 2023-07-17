@@ -39,6 +39,36 @@ Set.of("a", "b", "c");
 Map.of("a", 5, "b", 7);  // `Map`和`Set`的key必须是可哈希的
 ```
 
+可以通过集合初始化，避免多次调用`add`：
+```java
+List<String> firstNames = new ArrayList<>(List.of("Huey", "Dewey", "Louie"));
+List<String> lastNames = new ArrayList<>(Set.of("Duck"));
+```
 
+可以通过iterator的方式遍历：
+```java
+List<String> cities        = new ArrayList<>();
+Set<Integer> numbers       = new HashSet<>();
+Map<String,Turtle> turtles = new HashMap<>();
 
+for (String city : cities) {
+    System.out.println(city);
+}
+for (int num : numbers) { 
+    System.out.println(num);
+}
+for (String key : turtles.keySet()) {
+    System.out.println(key + ": " + turtles.get(key));
+}
+```
 
+枚举：
+```java
+public enum Month { 
+    JANUARY, FEBRUARY, MARCH, APRIL, 
+    MAY, JUNE, JULY, AUGUST, 
+    SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER;
+}
+
+Month month = Month.MAY;
+```
